@@ -88,7 +88,7 @@
 									class="glyphicon glyphicon-user">
 										${pageContext.request.userPrincipal.name} </span></a></li>
 							<li><a
-								href="${pageContext.request.contextPath}/j_spring_security_logout"><span
+								href="<c:url value="/user/logout"/>"><span
 									class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 						</ul>
 					</c:if>

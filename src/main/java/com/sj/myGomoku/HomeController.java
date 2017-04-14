@@ -36,16 +36,4 @@ public class HomeController {
 		return "home";
 	}
 
-	@RequestMapping(value = "/login")
-	public String login(Locale locale, Model model) {
-		return "security/login";
-
-	}
-
-	@RequestMapping(value = "/loginForm")
-	public String loginForm(Locale locale, Model model) {
-
-		return "security/loginForm";
-	}
-
 }

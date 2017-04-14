@@ -15,36 +15,7 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
 
-	<beans:bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<beans:property name="driverClassName" value="oracle.jdbc.OracleDriver" />
-		<beans:property name="url"
-			value="jdbc:oracle:thin:@localhost:1522:database" />
-		<beans:property name="username" value="system" />
-		<beans:property name="password" value="" />
-
-
-	</beans:bean>
-
-	<beans:bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</beans:bean>
-
-	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="typeAliasesPackage" value="com.sj.myGomoku" />
-		<property name="mapperLocations" value="classpath:com/sj/myGomoku/dao/*.xml" />
-	</beans:bean>
-
-	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
-	</beans:bean>
-
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.sj.myGomoku" />
-	</bean>
-
+	
 
 
 
